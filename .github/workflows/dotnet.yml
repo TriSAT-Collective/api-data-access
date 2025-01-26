@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  APP_SRC_DIRECTORY: "trisatenergy_SMCollector"
+  APP_SRC_DIRECTORY: "api-data-access"
   APP_PUBLISH_OUTPUT_DIRECTORY: "dist"
 
 jobs:
