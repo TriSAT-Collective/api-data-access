@@ -1,4 +1,5 @@
 using api_data_access;
+using api_data_access.Middlewares;
 using api_data_access.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +24,7 @@ builder.Services.Configure<AppSettings>(builder.Configuration.GetSection(nameof(
 builder.Services.AddSingleton<SmartMeterService>();
 builder.Services.AddSingleton<WeatherService>();
 
+
 var app = builder.Build();
 
 app.UsePathBase(app.Configuration.GetSection(nameof(AppSettings)).Get<AppSettings>()?.Api.PathBase);
@@ -33,10 +35,11 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-// app.MapOpenApi();
-
 app.UseHttpsRedirection();
 
+app.UseMiddleware<ApiKeyAuthenticationMiddleware>();
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

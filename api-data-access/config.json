@@ -3,7 +3,7 @@
     "MongoDB": {
       "ConnectionString": "mongodb://root:password@localhost:27017",
       "SmartMeter": {
-        "DatabaseName": "smartmeter_db",
+        "DatabaseName": "smartmeter_db"
       },
       "Weather": {
         "DatabaseName": "weather_db"
@@ -11,7 +11,7 @@
     },
     "Api": {
       "PathBase": "/api",
-      "Port": 8080
+      "ApiKey": "changeme"
     },
     "Logging": {
       "LogLevel": {

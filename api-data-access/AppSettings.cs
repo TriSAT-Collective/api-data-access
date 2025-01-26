@@ -25,5 +25,6 @@ public class AppSettings
     public class ApiSettings
     {
         public string PathBase { get; set; } = "/api";
+        public string ApiKey { get; set; }
     }
 }
