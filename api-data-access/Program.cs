@@ -21,6 +21,7 @@ builder.Configuration.AddConfiguration(
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection(nameof(AppSettings)));
 
 builder.Services.AddSingleton<SmartMeterService>();
+builder.Services.AddSingleton<WeatherService>();
 
 var app = builder.Build();
 
