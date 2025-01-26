@@ -1,8 +1,6 @@
 using api_data_access.Dtos;
-using api_data_access.Models;
 using api_data_access.Services;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Bson;
 
 namespace api_data_access.Controllers;
 
