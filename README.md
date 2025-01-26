@@ -14,38 +14,68 @@
 
 ## About
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc vulputate tincidunt.
+The smart-meter-collector is a C# application designed to collect and process data from smart meters. It reads data from various energy sources, processes it, and stores it in a MongoDB database.
 
 ## Features
 
-> Describe the features
+- Collects data from smart meters.
+- Supports multiple energy sources (Solar, Wind, Other).
+- Stores data in MongoDB.
+- Provides JSON serialization and file export functionality.
+- Configurable via JSON configuration files.
 
-## Dependencies
-
-> If there are any third-party dependencies, they should be listed here.
 
 ## Building
 
-> Describe how to build the project.
+
+To build the project, use the following command:
+```bash
+dotnet build
+```
 
 ## Installation
 
-> Describe how to install the project.
+To install the project, clone the repository and navigate to the project directory:
+```bash
+git clone https://github.com/TriSAT-Collective/api-data-access.git
+```
+```bash
+cd api-data-access
+```
 
 ## Usage
 
-> Describe how to use the project.
+To run the application, use the following command:
+```bash
+dotnet run
+```
 
 ## Configuration
 
-> Describe how to configure the project.
-
-```toml
-[general]
-log_level = "info"
-show_banner = true
+The application can be configured using a config.json file. Below is an example configuration:
+```JSON
+{
+  "AppSettings": {
+    "MongoDB": {
+      "ConnectionString": "mongodb://root:password@localhost:27017",
+      "SmartMeter": {
+        "DatabaseName": "smartmeter_db"
+      },
+      "Weather": {
+        "DatabaseName": "weather_db"
+      }
+    },
+    "Api": {
+      "PathBase": "/api",
+      "ApiKey": "changeme"
+    },
+    "Logging": {
+      "LogLevel": {
+        "Default": "Information",
+        "Microsoft.AspNetCore": "Warning"
+      }
+    },
+    "AllowedHosts": "*"
+  }
+}
 ```
-
-## Shoutout
-
-> Give a shoutout to any libraries or projects that inspired this one.

@@ -26,7 +26,7 @@ builder.Services.AddSingleton<WeatherService>();
 
 
 var app = builder.Build();
-
+// Sets the base path for the application.
 app.UsePathBase(app.Configuration.GetSection(nameof(AppSettings)).Get<AppSettings>()?.Api.PathBase);
 
 // Configure the HTTP request pipeline.
@@ -43,5 +43,5 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-
+// Runs the application.
 app.Run();
