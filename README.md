@@ -1,4 +1,4 @@
-<h1 align="center">smart-meter-collector</h1>
+<h1 align="center">api-data-access</h1>
 
 <p align="center">
   <a href="#about">About</a> •
@@ -14,7 +14,7 @@
 
 ## About
 
-The smart-meter-collector is a C# application designed to collect and process data from smart meters. It reads data from various energy sources, processes it, and stores it in a MongoDB database.
+The smart-meter-collector is a C# application designed to collect and process data from smart meters. It reads data from various energy sources, processes it, and stores it in a MongoDB database. The application is highly configurable via JSON configuration files, allowing users to easily adjust settings to fit their specific needs. It supports multiple energy sources such as Solar, Wind, and Other, and provides functionality for JSON serialization and file export.
 
 ## Features
 
@@ -23,6 +23,9 @@ The smart-meter-collector is a C# application designed to collect and process da
 - Stores data in MongoDB.
 - Provides JSON serialization and file export functionality.
 - Configurable via JSON configuration files.
+- Secure API access with API key authentication.
+- Supports HTTPS redirection.
+- OpenAPI documentation for development environments
 
 
 ## Building
